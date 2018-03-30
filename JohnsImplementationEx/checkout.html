@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<script type="text/javascript" src="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSDK.1.2.0.min.js"></script>
+	<script type="text/javascript" src="scripts/checkout.js"></script>
+</head>
+
+<body>
+	<h4>Checkout should appear below:</h4>
+	<div class="checkout" id="checkout">
+		<form id="infoForm" action="http://localhost:8000/cgi-bin/checkout_requester.py">
+			<div>Amount: <input type="text" id="value" name="value" value="199"/><br></div>
+			<div>Currency: <input type="text" id="currency" name="currency" value="USD"/><br></div>
+			<div>CountryCode: <input type="text" id="countryCode" name="countryCode" value="US"/><br></div>
+			<div>ShopperLocale: <input type="text" id="shopperLocale" name="shopperLocale" value="en_GB"/><br></div>
+			<div>ShopperReference: <input type="text" id="shopperReference" name="shopperReference" value="localhostCheckout1"/><br></div>
+			<div>Channel: <input type="text" id="channel" name="channel" value="Web"/><br></div>
+			<div>MerchantAccount: <input type="text" id="merchantAccount" name="merchantAccount" value="ColinRood"/><br></div>
+			<input type="button" id="checkoutBtn" value="Checkout"/>
+		</form>
+	</div>
+	<hr>
+	<div id="verifyContainer" style="display: none;">
+		<input type="button" id="verifyBtn" value="Verify Payment"/>
+		<div id="verifyResult"></div>
+	</div>
+</body>
+
+</html>
+
+<script>
+
+initPage();
+
+</script>

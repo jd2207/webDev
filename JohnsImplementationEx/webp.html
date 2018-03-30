@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Web Panhandling Inc.</title>
+</head>
+
+<body>
+  <h1>Welcome to Web Panhandling Inc.</h1>
+  <h2>Donations always gratefully received!</h2>
+
+  <br>
+  <div>
+  <form method="POST" action="http://localhost:8000/php/confirmation.php" >
+    Enter any amount: $ <input type="text" size="20" autocomplete="off" name="money" />
+    <input type="submit" value="Pay via PHP implementations" />
+  </form>
+  </div>
+  <br>
+
+  <div>
+  <form method="POST" action="http://localhost:8080/cgi-bin/server_confirm.py" >
+    Enter any amount: $ <input type="text" size="20" autocomplete="off" name="money" />
+    <input type="submit" value="Pay via CGI/Python implementations" />
+  </form>
+  </div>
+
+</body>
+</html>
+
+
